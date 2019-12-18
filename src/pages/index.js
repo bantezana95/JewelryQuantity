@@ -1,21 +1,29 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
+import SEO from '../components/seo'
+//import ProductGrid from '~/components/ProductGrid'
+import ItemInfo from '../components/testI'
+import Header from '../components/header'
+import styled from 'styled-components'
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <>
+  <Wrapper>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+
+    <Header />
+    <h1>Welcome to Test site</h1>
+    <p>Purchase this Ring</p>
+    <img src="../images/gatsby-icon.png"></img>
+    <ItemInfo />
+    </Wrapper>
+  </>
 )
 
 export default IndexPage
+
+const Wrapper = styled.h1`
+text-align: center;
+font-size: 1em
+`
+
